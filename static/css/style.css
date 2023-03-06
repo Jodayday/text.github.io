@@ -1,0 +1,46 @@
+/* 폰트추가 */
+@font-face {
+    font-family: 'cafe24';
+    src: url('/static/font/Cafe24.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'gmark';
+    src: url('/static/font/GmarketSansTTFMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+* {
+    font-family: 'cafe24';
+    color :#000;
+}
+/* 이미지 위의 글자에 그림자 넣어 가독성높힘 */
+.font-shadow {
+    font-family: 'gmark';
+    text-shadow:1px 1px 1px #ffffff,1px -1px 1px #ffffff,-1px 1px 1px #ffffff,-1px -1px 1px #ffffff;
+    color :#000;
+}
+/* pc에서 이미지크기 제한 */
+.pc-img {
+    max-height: 700px;
+}
+
+div.fixed-nav{
+    background-color: brown;
+    width: 60px;
+    height: 60px;
+    transition-delay: 300ms;
+    transition-duration: 500ms;
+}
+
+.fixed-item{
+    background-color: orange;
+    width: 60px;
+    height: 60px;
+}
+
+.act-logo{
+    width: 90%;
+    height: 90%;
+}
