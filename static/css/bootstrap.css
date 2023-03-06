@@ -7005,7 +7005,7 @@ textarea.form-control-lg {
 .fixed-bottom {
   position: fixed;
   right: 30px;
-  bottom: 150px;
+  bottom: 20px;
   z-index: 1030;
 }
 

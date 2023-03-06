@@ -1,14 +1,3 @@
-//**  클릭시 포커스*/
-function navChack() {
-  const fixedNav = document.getElementById("nav");
-  fixedNav.focus();
-}
-
-const nav = document
-  .getElementById("nav")
-  .addEventListener("click", navChack());
-console.log(nav);
-
 // 모바일기기 체크
 
 function isMobile() {
@@ -28,18 +17,12 @@ function isMobile() {
   }
 }
 
-function aTagCall(id) {
-  if (isMobile()) {
-    location.href = "/main.html"; //모바일 페이지
-  } else {
-    location.href = "/main.html"; //PC용 페이지
-  }
-}
-
+var callLink = document.getElementById("call");
 // Check if the device is mobile or desktop
 if (isMobile()) {
-  var callLink = document.getElementsByClassName(".call");
   // If mobile device, set href to tel: link
+  console.log("start!?");
+  console.log(callLink);
   callLink.href = "tel:010-3912-1825";
   console.log(callLink);
   // Remove data-bs-toggle and data-bs-target attributes

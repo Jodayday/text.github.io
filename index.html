@@ -95,18 +95,18 @@ body{
               
 
         </main>
-        <div id="nav" class="fixed-nav fixed-bottom rounded-pill text-center">
+
+        <div id="nav" class="fixed-bottom rounded-pill text-center" style="bottom: 20px;">
           <div class="fixed-item rounded-pill mb-3">
-            <a href="#">
+            <a href="http://pf.kakao.com/_MxmXDxj/chat">
               <img src="static/img/talklogo.png" alt="카카오톡" class="act-logo">
             </a>
           </div>
 
           <div class="fixed-item rounded-pill ">
               <a href="#" class="call" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <img src="static/img/calllogo.png" alt="전화하기" class="act-logo">
+                <img src="static/img/calllogo.png" alt="전화하기" class="act-logo">
               </a>
-
           </div>
         </div>
 
@@ -195,6 +195,56 @@ body{
 
 
     <script src="static/js/bootstrap.js"></script>
-    <script src="static/js/main.js"></script>
+    <script>
+
+            // 모바일기기 체크
+
+function isMobile() {
+  var UserAgent = navigator.userAgent;
+
+  if (
+    UserAgent.match(
+      /iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i
+    ) != null ||
+    UserAgent.match(/LG|SAMSUNG|Samsung/) != null
+  ) {
+    console.log("yes~");
+    return true;
+  } else {
+    console.log("no!");
+    return false;
+  }
+}
+function pcChange(){
+var callLink = document.querySelector("a.call");
+// Check if the device is mobile or desktop
+if (isMobile()) {
+  // If mobile device, set href to tel: link
+  callLink.href = "tel:010-3912-1825";
+  // Remove data-bs-toggle and data-bs-target attributes
+  callLink.removeAttribute("data-bs-toggle");
+  callLink.removeAttribute("data-bs-target");
+}
+else {
+  // If desktop device, set data-bs-toggle and data-bs-target attributes
+  callLink.href = "#";
+  callLink.setAttribute('data-bs-toggle', 'modal');
+  callLink.setAttribute('data-bs-target', '#exampleModal');
+}
+}
+      //**PC인지 모바일인지 변경됨을 체크하는 함수*/
+      var prevUserAgent = navigator.userAgent;
+
+      setInterval(function() {
+        if (navigator.userAgent !== prevUserAgent) {
+          // User agent has changed, do something
+          pcChange();
+          
+          // Update prevUserAgent with new value
+          prevUserAgent = navigator.userAgent;
+        }
+      }, 1000); // Check for changes every 1 second
+
+    </script>
 </body>
 </html>
