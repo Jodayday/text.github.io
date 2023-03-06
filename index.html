@@ -443,6 +443,7 @@ else {
       }, 1000); // Check for changes every 1 second
 
       var isMobiles = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); // 안드로이드 아이폰을 검사해 체크
+      var callLink = document.querySelector("a.call");
       if (isMobiles) {
       console.log("normal Mo");
       // If mobile device, set href to tel: link
