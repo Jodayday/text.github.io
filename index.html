@@ -401,14 +401,11 @@ function isMobile() {
 
   if (
     UserAgent.match(
-      /iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i
-    ) != null ||
+      /iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null ||
     UserAgent.match(/LG|SAMSUNG|Samsung/) != null
   ) {
-    console.log("yes~");
     return true;
   } else {
-    console.log("no!");
     return false;
   }
 }
@@ -442,7 +439,20 @@ else {
         }
       }, 1000); // Check for changes every 1 second
 
-
+      var isMobiles = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); // 안드로이드 아이폰을 검사해 체크
+      if (isMobiles) {
+      // If mobile device, set href to tel: link
+      callLink.href = "tel:010-3912-1825";
+      // Remove data-bs-toggle and data-bs-target attributes
+      callLink.removeAttribute("data-bs-toggle");
+      callLink.removeAttribute("data-bs-target");
+    }
+    else {
+      // If desktop device, set data-bs-toggle and data-bs-target attributes
+      callLink.href = "#";
+      callLink.setAttribute('data-bs-toggle', 'modal');
+      callLink.setAttribute('data-bs-target', '#exampleModal');
+    }
       
     </script>
 </body>
