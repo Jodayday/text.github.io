@@ -1,16 +1,4 @@
-/* 폰트추가 */
-@font-face {
-    font-family: 'cafe24';
-    src: url('/static/font/Cafe24.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'gmark';
-    src: url('/static/font/GmarketSansTTFMedium.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+
 * {
     font-family: 'cafe24';
     color :#000;
