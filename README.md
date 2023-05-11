@@ -1,17 +1,6 @@
-# 테스트 웹사이트
+# [테스트 웹사이트](https://jodayday.github.io/twinklehouse/)
 
-## 배포환경이 바뀐다면
+## 개선사항
 
-1. base Tag 수정
-2. [카카오비지니스](https://developers.kakao.com/) 여기서 도메인등록
-
-## 관리자가 변경된다면
-
-1. footer 변경
-2. #nav 연결 수정
-
-## 내용을 변경한다면
-
-1. header[로고,상호명]
-2. #carouselExampleCaptions[이미지, 멘트]
-3. main Tag의 전반적이 내용일뜻
+1. 모바일에 맞게 변경이 필요해보임(pc에서 폭을 제한하는것)
+2. 상단의 메뉴를 만들고, 후크로 페이지 이동, 문의연락하기(옆에 없애고)
